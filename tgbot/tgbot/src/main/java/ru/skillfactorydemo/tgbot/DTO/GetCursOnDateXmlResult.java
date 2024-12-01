@@ -2,19 +2,18 @@ package ru.skillfactorydemo.tgbot.DTO;
 
 import javax.xml.bind.annotation.*;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="GetCursOnDateXmlResult ")
-@Getter
-@Setter
+@XmlAccessorType(XmlAccessType.FIELD) //Указываем, как получить/передать значение в поля
+@XmlRootElement(name = "GetCursOnDateXmlResult") //Корневой элемент, то есть внутри этого элемента должны быть элементы, которые указаны как поля
+@Data //генерируем геттеры и сеттеры
 public class GetCursOnDateXmlResult {
 
     @XmlElementWrapper(name = "ValuteData", namespace = "")
-    @XmlElement(name ="ValuteCursOnDate", namespace = "")
-    private List<ValuteCursOnDate> valuteData  = new ArrayList<>();
+    @XmlElement(name = "ValuteCursOnDate", namespace = "")
+    private List<ValuteCursOnDate> valuteData = new ArrayList<>();
 }
