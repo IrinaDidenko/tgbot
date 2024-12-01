@@ -1,6 +1,6 @@
 package ru.skillfactorydemo.tgbot.DTO;
 
-import jakarta.xml.bind.annotation.*;
+import javax.xml.bind.annotation.*;
 
 import lombok.Getter;
 import lombok.Setter;
