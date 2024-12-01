@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="ValuteCursOnDate")
+@XmlRootElement(name="GetCursOnDateXmlResult ")
 @Getter
 @Setter
 public class GetCursOnDateXmlResult {
 
     @XmlElementWrapper(name = "ValuteData", namespace = "")
-    @XmlElement(name ="valuteCursOnData", namespace = "")
-    private List<ValuteCursOnDate> valuteData = new ArrayList<>();
+    @XmlElement(name ="ValuteCursOnDate", namespace = "")
+    private List<ValuteCursOnDate> valuteData  = new ArrayList<>();
 }

@@ -10,11 +10,11 @@ import lombok.Setter;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
-@XmlRootElement(name="GetCourseonDateXML", namespace = "http://www.cbr.ru/dataservice/")
+@XmlRootElement(name="GetCursOnDateXML", namespace =  "http://web.cbr.ru/")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
 public class GetCursOnDateXml {
-@XmlElement(name = "On_Date", required = true, namespace =  "http://www.cbr.ru/dataservice/")
+@XmlElement(name = "On_Date", required = true, namespace =   "http://web.cbr.ru/")
     protected XMLGregorianCalendar onDate;
 }

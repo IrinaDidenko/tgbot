@@ -12,14 +12,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ValuteCursOnDate {
-    @XmlElement(name = "vMame")
+    @XmlElement(name = "Vname")
     private String name;
-    @XmlElement(name="vNom")
+    @XmlElement(name="Vnom")
     private int nominal;
-    @XmlElement(name = "vCourse")
+    @XmlElement(name = "Vcurs")
     private double course;
-    @XmlElement(name = "vCode")
+    @XmlElement(name = "Vcode")
     private String  code;
-    @XmlElement(name ="vChCode")
+    @XmlElement(name ="Vcode")
     private String chCode;
 }

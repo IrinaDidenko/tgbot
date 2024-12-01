@@ -18,7 +18,10 @@ public class CentralRussianBankService extends WebServiceTemplate {
         final GetCursOnDateXml getCursOnDateXml = new GetCursOnDateXml();
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.setTime(new Date());
+
         XMLGregorianCalendar xmlGregorianCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        getCursOnDateXml.setOnDate(xmlGregorianCalendar);
+
         GetCursOnDateXmlResponse response = (GetCursOnDateXmlResponse) marshalSendAndReceive(cbrApiUrl, getCursOnDateXml);
         if (response == null) {
             throw new IllegalStateException("Could not get response from CBR");

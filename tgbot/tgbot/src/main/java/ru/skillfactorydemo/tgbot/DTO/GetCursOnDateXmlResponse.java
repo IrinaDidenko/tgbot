@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import lombok.Getter;
 import lombok.Setter;
 
-@XmlRootElement(name = "GetCursOnDateXMLResponse", namespace = "http://www.cbr.ru/dataservice/")
+@XmlRootElement(name = "GetCursOnDateXmlResponse", namespace = "http://web.cbr.ru/")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
 public class GetCursOnDateXmlResponse {
-    @XmlElement(name = "GetCursOnDateXmlResult", namespace = "http://www.cbr.ru/dataservice/")
+    @XmlElement(name = "GetCursOnDateXmlResult", namespace =  "http://web.cbr.ru/")
     private GetCursOnDateXmlResult getCursOnDateXmlResult;
 
 }
