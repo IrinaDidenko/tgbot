@@ -1,7 +1,7 @@
 package ru.skillfactorydemo.tgbot.service;
 
 import lombok.RequiredArgsConstructor;
-import org.jvnet.hk2.annotations.Service;
+import org.springframework.stereotype.Service;
 import ru.skillfactorydemo.tgbot.entity.Income;
 import ru.skillfactorydemo.tgbot.entity.Spend;
 import ru.skillfactorydemo.tgbot.repository.IncomeRepository;
@@ -12,9 +12,12 @@ import java.math.BigDecimal;
 @Service
 @RequiredArgsConstructor
 public class FinanceService {
+
+    private static final String ADD_INCOME = "/addincome";
+
     private final IncomeRepository incomeRepository;
     private final SpendRepository spendRepository;
-   private static final String ADD_INCOME = "/addincome";
+
 
     public String addFinanceOperation(String operationType, String price, Long chatId) {
         String message;
@@ -33,5 +36,4 @@ public class FinanceService {
         }
         return message;
     }
-
 }
