@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 public class Income
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
     @Column(name = "CHAT_ID")

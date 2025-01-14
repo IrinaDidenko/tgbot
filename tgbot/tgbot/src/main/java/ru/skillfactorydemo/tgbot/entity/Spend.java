@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Table(name = "SPEND")
 public class Spend {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "CHAT_ID")

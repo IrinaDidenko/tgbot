@@ -18,4 +18,8 @@ public class StatsService {
     public int getCountOfSpendThatGreaterThan(BigDecimal amount) {
         return  statsRepository.getCountOfSpendThatGreaterThan(amount);
     }
+
+
+
+
 }
